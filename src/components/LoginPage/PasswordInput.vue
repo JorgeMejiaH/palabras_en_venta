@@ -1,45 +1,43 @@
 <template>
-    <div>
-      <label for="password">Contraseña:</label>
+  <div>
+    <label for="password" class="lbl-user-login">Contraseña:</label>
+    <input
+      :type="showPassword ? 'text' : 'password'"
+      id="password"
+      :value="password"
+      @input="handlePasswordChange"
+      class="in-user-login"
+    />
+
+    <label for="showPassword" class="lbl-user-login">
+      Mostrar Contraseña:
       <input
-        :type="showPassword ? 'text' : 'password'"
-        id="password"
-        :value="password"
-        @input="handlePasswordChange"
-        class="in-user-login"
+        id="showPassword"
+        type="checkbox"
+        :checked="showPassword"
+        @change="toggleShowPassword"
       />
-  
-      <label for="showPassword">
-        Mostrar Contraseña:
-        <input
-          id="showPassword"
-          type="checkbox"
-          :checked="showPassword"
-          @change="toggleShowPassword"
-        />
-      </label>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        password: "",
-        showPassword: false,
-      };
+    </label>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      password: "",
+      showPassword: false,
+    };
+  },
+  methods: {
+    handlePasswordChange(event) {
+      this.password = event.target.value;
     },
-    methods: {
-      handlePasswordChange(event) {
-        this.password = event.target.value;
-      },
-      toggleShowPassword() {
-        this.showPassword = !this.showPassword;
-      },
+    toggleShowPassword() {
+      this.showPassword = !this.showPassword;
     },
-  };
-  </script>
-  
-  <style>
-  </style>
-  
+  },
+};
+</script>
+
+<style></style>

@@ -2,12 +2,6 @@
   <div>
     <img src="@/assets/Logo.png" alt="Logo de la pagina" class="img-logo" />
     <img
-      src="@/assets/PageTitle.png"
-      alt="Titulo de la pagina"
-      class="img-title"
-    />
-
-    <img
       src="@/assets/LoginBackground.png"
       alt="Fondo de la pagina"
       class="login-background"
@@ -41,16 +35,10 @@ export default {
   position: absolute;
   top: 0.5%;
   left: 1%;
-  width: 6%;
+  width: 15%;
   height: auto;
 }
-.img-title {
-  position: absolute;
-  top: 3.5%;
-  left: 7.5%;
-  width: 8%;
-  height: auto;
-}
+
 .txt-not-account {
   text-align: end;
   margin-right: 5%;
@@ -101,7 +89,7 @@ export default {
   border-radius: 8px;
 }
 
-label {
+.lbl-user-login {
   display: block;
   margin-bottom: 0;
   font-size: 100%;

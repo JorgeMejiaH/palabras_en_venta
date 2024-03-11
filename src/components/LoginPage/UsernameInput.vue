@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label for="username">Nombre de usuario:</label>
+    <label for="username" class="lbl-user-login">Nombre de usuario:</label>
     <input
       type="text"
       :value="username"
