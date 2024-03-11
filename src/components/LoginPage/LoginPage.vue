@@ -91,7 +91,7 @@ export default {
   text-align: end;
   margin-top: 0;
   margin-right: 28%;
-  font-size: 200%;
+  font-size: 201%;
   font-weight: bold;
 }
 .in-user-login {
